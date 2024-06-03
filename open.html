@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+.error {
+    color: red;
+}
+.word{
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(52, 165, 42);
+            font-weight: bolders;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: rgb(72, 255, 0);
+            border-color: black;
+        }
+        .more{
+            display: inline-flex;
+            position: relative;
+            top: -50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="move">
+        <button ><a class="word" href="index.html"> question1 </a></button>
+        <button><a class="word" href="in.html"> question2 </a></button>
+        <button><a class="word" href="open.html"> question3 </a></button>
+        <button><a href="folder.html"> question4</a></button>
+    </div>
+    <h1>Arithmetic Operations</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="performArithmetic()">Calculate</button>
+
+    <div class="result" id="resultDisplay"></div>
+
+    <script>
+        function performArithmetic() {
+            const input = document.getElementById('numberInput').value;
+            const number = parseFloat(input);
+
+            if (isNaN(number)) {
+                document.getElementById('resultDisplay').innerHTML = "<p class='error'>Please enter a valid number.</p>";
+                return;
+            }
+
+            const add = number + 5;
+            const subtract = add - 3;
+            const multiply = subtract * 2;
+            const divide = multiply / 4;
+
+            document.getElementById('resultDisplay').innerHTML = `
+                <p>Original number: ${number}</p>
+                <p>After adding 5: ${add}</p>
+                <p>After subtracting 3: ${subtract}</p>
+                <p>After multiplying by 2: ${multiply}</p>
+                <p>After dividing by 4: ${divide}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>

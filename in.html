@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variable Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .variable {
+            color: blue;
+        }
+        .word{
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(52, 165, 42);
+            font-weight: bolders;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: rgb(72, 255, 0);
+            border-color: black;
+        }
+        .more{
+            display: inline-flex;
+            position: relative;
+            top: -20px;
+        }
+
+   
+    </style>
+</head>
+<body>
+    <div class="move">
+        <button ><a class="word" href="index.html"> question1 </a></button>
+        <button><a class="word" href="in.html"> question2 </a></button>
+        <button><a class="word" href="open.html"> question3 </a></button>
+        <button><a href="folder.html"> question4</a></button>
+    </div>
+
+
+    <h1>JavaScript Variable Output</h1>
+    <div class="result" id="resultDisplay"></div>
+
+    <script>
+        // JavaScript code to execute the operations and calculate the result
+        var a = 2, b = 1;
+        var result = --a - --b + ++b + b--;
+
+        // Display the final values of a, b, and result
+        document.getElementById('resultDisplay').innerHTML = `
+            <p><span class="variable">a:</span> ${a}</p>
+            <p><span class="variable">b:</span> ${b}</p>
+            <p><span class="variable">result:</span> ${result}</p>
+        `;
+    </script>
+
+</body>
+</html>

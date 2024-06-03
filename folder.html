@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .greeting {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .word{
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(52, 165, 42);
+            font-weight: bolders;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: rgb(72, 255, 0);
+            border-color: black;
+        }
+        .more{
+            display: inline-flex;
+            position: relative;
+            top: -50px;
+        }
+   
+    </style>
+</head>
+<div class="move">
+    <button ><a class="word" href="index.html"> question1 </a></button>
+    <button><a class="word" href="in.html"> question2 </a></button>
+    <button><a class="word" href="open.html"> question3 </a></button>
+    <button><a href="folder.html"> question4</a></button>
+</div>
+    <h1>Greet User</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="greetUser()">Greet</button>
+
+    <div class="greeting" id="greetingDisplay"></div>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                document.getElementById('greetingDisplay').innerHTML = `<p>Hello, ${name}!</p>`;
+            } else {
+                document.getElementById('greetingDisplay').innerHTML = `<p>Please enter your name.</p>`;
+            }
+        }
+    </script>
+
+</body>
+</html>

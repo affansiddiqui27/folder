@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .table {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .word{
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(52, 165, 42);
+            font-weight: bolders;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color: rgb(72, 255, 0);
+            border-color: black;
+        }
+        .more{
+            display: inline-flex;
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="move">
+        <button ><a class="word" href="index.html"> question1 </a></button>
+        <button><a class="word" href="in.html"> question2 </a></button>
+        <button><a class="word" href="open.html"> question3 </a></button>
+        <button><a href="folder.html"> question4</a></button>
+    </div>
+    <h1>Multiplication Table</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="displayTable()">Show Table</button>
+
+    <div class="table" id="tableDisplay"></div>
+
+    <script>
+        function displayTable() {
+            const input = document.getElementById('numberInput').value;
+            const number = input ? parseInt(input) : 5;
+            let table = `<h2>Multiplication Table of ${number}</h2>`;
+            for (let i = 1; i <= 10; i++) {
+                table += `<p>${number} x ${i} = ${number * i}</p>`;
+            }
+            document.getElementById('tableDisplay').innerHTML = table;
+        }
+    </script>
+
+</body>
+</html>
